@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sample</title>
+</head>
+<html>
+
+<body>
+  
+  <script>
+  const days = ['월요일', '화요일'];
+  days.push('수요일', '목요일', '금요일', '토요일', '일요일');
+  days.pop();
+  days.pop();
+  days.pop();
+
+  const days2 = ['금요일', '토요일', '일요일']
+  const result = days.concat(days2)
+  // myPrint(days);
+  // myPrint(result);
+
+  const 휴일 = result.slice(5)
+  // myPrint(휴일);
+
+  // myPrint(result);
+
+  const aa = result.splice(0, 2);
+  // myPrint(aa);
+  // myPrint(result);
+
+  const arr = [1,2,3,4,5];
+  const output = arr.map(a => a + 1);
+
+  // const output = arr.map(function(a) {
+  //   return a + 1;
+  // })
+
+  // function plus1(a) {
+  //   return a + 1;
+  // }
+  // const output = arr.map(plus1)
+  // myPrint(output);
+
+  const bb = arr.map(b => b * 2);
+  // myPrint(bb)
+
+  // const cc = arr.map(function(c) {
+  //   return c * 2;
+  // })
+  // myPrint(cc);
+
+  // function plus3(d) {
+  //   return d * 2;
+  // }
+  // const ddd = arr.map(plus3);
+  // myPrint(ddd);
+
+  const 객체배열 = [
+    {count:1},
+    {count:2},
+    {count:3},
+    {count:4},
+    {count:5}
+  ];
+
+  const ddd = 객체배열.map(a =>a.count + 1 );
+  // console.log(ddd);
+
+  const eee = 객체배열.map(function(e) {
+    return e.count * 3;
+  })
+  // console.log(eee);
+  
+  const 학생기록 = [
+    {name: '김', score:80},
+    {name: '이', score:100},
+    {name: '박', score:70},
+    {name: '최', score:90},
+    {name: '송', score:60},
+  ];
+  const fff = 학생기록.map(f => f.score >= 80 ? f.name: '');
+  // myPrint(fff)
+
+  const qqq = 학생기록.filter(function(q) {
+    if(q.score >= 80) {
+      return q.name;
+    }
+  });
+  // console.log(qqq)
+
+
+  const a = [1,2,3,4,5];
+  const b = [a,6,7,8,9];  // [[1,2,3,4,5],6,7,8,9,]
+  const c = [...a,6,7,8,9]; // [1,2,3,4,5,6,7,8,9]
+  // myPrint(b)
+  // myPrint(c)
+  // console.log(b);
+  // console.log(c);
+
+  const d =[...a];
+  a[0] =100;
+  // myPrint(d);
+  // myPrint(a);
+
+  // const 문자열 = 'student';
+  // myPrint(문자열[0])
+  // const output1 = [...문자열];
+  // myPrint(output1)
+
+  //디스트럭처링 Destructuring(비구조화, 파괴)
+  const arrr = [1,2,3];
+  // const a1 = arr[0];
+  // const b1 = arr[1];
+  // const c1 = arr[2];
+  const [a1,b1,c1] = arrr;
+  // console.log(arrr)
+  const [a2,b2,c2,d2 = 4] = arrr;
+  console.log(arrr)
+
+  const [x1, ...y1] =arrr
+  console.log(arrr)
+
+
+
+
+
+  function myPrint(arr) {
+    const p = document.createElement('p');
+    p.innerHTML = arr;
+    document.body.appendChild(p);
+  }
+  </script>
+</body>
+
+</html>
+
